@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STYLE BY GRACIOUS | Fashion & Bespoke Design</title>
+<meta name="description" content="STYLE BY GRACIOUS is a premium fashion house creating bespoke outfits, bridal wear and occasion wear with elegance, craftsmanship and individuality.">
+<meta property="og:title" content="STYLE BY GRACIOUS | Fashion & Bespoke Design">
+<meta property="og:description" content="Bespoke outfits, bridal wear and occasion wear. Where Elegance Meets Expression.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2023/04/07/05/59/woman-7905583_1280.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ================= STYLES ================= */
+:root{--bg:#1c0c16;--bg2:#2a1120;--text:#f6ebe6;--muted:#c9b3ae;--blush:#e8c4bd;--gold:#c9a36b;--line:rgba(232,196,189,.22);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,#3a1a2c,#5a2a3e)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+h1,h2,h3,p,a,li,label{overflow-wrap:break-word;word-break:normal}
+.split>*,.cg>*,.svp>*,.hero .wrap>*,.grid3>*,.fg>*{min-width:0}
+main{overflow-x:clip}
+h2{font-size:clamp(2rem,5.5vw,4.6rem)}
+h3{font-size:clamp(1.4rem,2.4vw,1.7rem)}
+.big3{font-size:clamp(1.9rem,4vw,2.6rem)}
+p{max-width:58ch;color:var(--muted)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+section{padding:clamp(70px,10vw,140px) 0;position:relative}
+.sr{position:absolute;left:-9999px}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
+.blob{position:fixed;width:46vw;height:46vw;border-radius:50%;filter:blur(90px);opacity:.28;z-index:0;pointer-events:none;animation:drift 22s ease-in-out infinite alternate}
+.b1{background:#7a2a4c;top:-12vw;left:-10vw}.b2{background:#8a6a3a;bottom:-16vw;right:-12vw;animation-delay:-9s}
+@keyframes drift{to{transform:translate3d(8vw,6vw,0) scale(1.15)}}
+main,footer,header{position:relative;z-index:2}
+/* loader */
+#loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-content:center;text-align:center;transition:transform 1s var(--ease)}
+#loader.done{transform:translateY(-100%)}
+#loader{padding:0 16px}
+#loader h1{font-size:clamp(1.35rem,6.4vw,4.5rem);letter-spacing:.12em;font-weight:300;white-space:nowrap}
+#loader i{display:block;height:1px;background:var(--gold);width:0;margin:22px auto 10px;transition:width .2s}
+#pct{font-size:.8rem;letter-spacing:.3em;color:var(--gold)}
+/* cursor, progress */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:150}
+#cur,#dot{position:fixed;top:0;left:0;pointer-events:none;z-index:180;border-radius:50%;display:none}
+#cur{width:38px;height:38px;border:1px solid var(--gold);margin:-19px 0 0 -19px;transition:width .3s,height .3s,margin .3s,background .3s}
+#dot{width:6px;height:6px;background:var(--gold);margin:-3px 0 0 -3px}
+#cur.big{width:74px;height:74px;margin:-37px 0 0 -37px;background:rgba(201,163,107,.14)}
+@media (hover:hover) and (pointer:fine){#cur,#dot{display:block}body.cc,body.cc a,body.cc button{cursor:none}}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .5s,padding .5s,backdrop-filter .5s;padding:26px 0}
+header.solid{background:rgba(28,12,22,.72);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--serif);font-size:1.35rem;letter-spacing:.22em;font-weight:600;white-space:nowrap}
+.links{display:flex;gap:6px;position:relative}
+.links a{padding:8px 14px;font-size:.92rem;letter-spacing:.08em;position:relative;z-index:1;transition:color .3s}
+.links a.on{color:var(--gold)}
+#ind{position:absolute;bottom:2px;height:1px;background:var(--gold);transition:left .5s var(--ease),width .5s var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;max-width:100%;gap:10px;padding:14px 30px;border:1px solid var(--gold);font-size:.9rem;letter-spacing:.1em;position:relative;overflow:hidden;transition:color .4s,transform .3s;isolation:isolate}
+.btn:before{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover:before{transform:none}.btn:hover{color:var(--bg)}
+.btn.fill{background:var(--gold);color:var(--bg)}.btn.fill:before{background:var(--blush)}
+.btn.wa{border-color:#25d366}.btn.wa:before{background:#25d366}
+.btn svg{width:18px;height:18px;fill:currentColor}
+#burger{display:none;width:44px;height:44px;position:relative}
+#burger span{position:absolute;left:10px;right:10px;height:1px;background:var(--text);transition:.4s var(--ease)}
+#burger span:nth-child(1){top:16px}#burger span:nth-child(2){top:27px}
+#burger[aria-expanded=true] span:nth-child(1){top:21px;transform:rotate(45deg)}
+#burger[aria-expanded=true] span:nth-child(2){top:21px;transform:rotate(-45deg)}
+#mob{position:fixed;inset:0;z-index:99;background:var(--bg2);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;clip-path:circle(0 at calc(100% - 40px) 40px);transition:clip-path .8s var(--ease);visibility:hidden}
+#mob.open{clip-path:circle(150% at calc(100% - 40px) 40px);visibility:visible}
+#mob a{font-family:var(--serif);font-size:2.6rem;padding:6px 20px}
+@media(max-width:960px){.links,.nav>.btn{display:none}#burger{display:block}}
+/* pages */
+.page{display:none}.page.act{display:block;animation:pin .9s var(--ease)}
+@keyframes pin{from{opacity:0;transform:translateY(30px)}}
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.mask{overflow:hidden;display:block}.mask>span{display:block;transform:translateY(110%);transition:transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.in .mask>span,.mask.in>span{transform:none}
+.eyebrow{color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.25rem;margin-bottom:14px;display:block}
+.head{margin-bottom:clamp(40px,6vw,80px)}
+/* hero */
+.hero{min-height:100vh;display:grid;align-items:center;padding:130px 0 70px;overflow:hidden}
+.hero .wrap{width:100%}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,9vw,8.2rem);letter-spacing:.02em;font-weight:300}
+.hero h1 em{color:var(--blush);font-style:italic}
+.tag{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-style:italic;color:var(--blush);margin:22px 0 14px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.stage{position:relative;height:min(74vh,640px);perspective:1200px}
+.layer{position:absolute;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,.6);transition:transform .25s ease-out;will-change:transform}
+.l1{inset:0 12% 8% 10%;border-radius:200px 200px 6px 6px}
+.l2{width:44%;height:38%;right:0;bottom:0;border:8px solid var(--bg);border-radius:6px}
+.l3{width:34%;height:28%;left:0;top:16%;border:6px solid var(--bg);border-radius:50%}
+.ring{position:absolute;width:150px;height:150px;border:1px dashed var(--gold);border-radius:50%;top:2%;right:6%;animation:spin 30s linear infinite;opacity:.7}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{animation:flt 6s ease-in-out infinite}@keyframes flt{50%{translate:0 -14px}}
+.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:20px 0;position:relative;z-index:2}
+.marq div{display:inline-block;animation:mq 30s linear infinite;font-family:var(--serif);font-size:2.2rem;font-style:italic;color:var(--blush)}
+.marq span{margin:0 28px;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;perspective:1400px}
+.tilt{transform-style:preserve-3d;transition:transform .3s ease-out;will-change:transform}
+.card{position:relative;aspect-ratio:3/4.3;overflow:hidden;background:var(--bg2)}
+.card img{transition:transform 1.4s var(--ease)}.card:hover img{transform:scale(1.1)}
+.card .ov{position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(20,6,14,.92));display:flex;flex-direction:column;justify-content:flex-end;padding:28px;gap:6px;transform:translateZ(40px)}
+.card .ov p{font-size:.95rem;max-height:0;opacity:0;transition:.6s var(--ease)}
+.card:hover .ov p,.card:focus-within .ov p{max-height:120px;opacity:1}
+.lnk{color:var(--gold);letter-spacing:.1em;font-size:.85rem;display:inline-block;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease);padding-bottom:3px;width:max-content}
+.lnk:hover{background-size:100% 1px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:300px 300px 0 0}
+.frame.sq{border-radius:6px}
+.par{will-change:transform}
+/* services */
+.svc{padding:34px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:14px;transition:border-color .4s,translate .5s var(--ease)}
+.svc:hover{border-color:var(--gold);translate:0 -8px}
+.svc svg.ic{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1}
+.svp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,70px);align-items:center;padding:clamp(30px,5vw,60px) 0;border-top:1px solid var(--line)}
+.svp:nth-child(even) .frame{order:2}
+.svp .frame{aspect-ratio:5/4;border-radius:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;counter-reset:s;margin-top:40px;position:relative}
+.step{padding:28px 22px;border-left:1px solid var(--line);counter-increment:s}
+.step:before{content:counter(s);font-family:var(--serif);font-size:3rem;color:var(--gold);display:block;line-height:1}
+/* lookbook */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.filters button{padding:9px 22px;border:1px solid var(--line);font-size:.88rem;letter-spacing:.08em;transition:.4s}
+.filters button.on,.filters button:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.mas{columns:3 260px;column-gap:20px}
+.mi{break-inside:avoid;margin-bottom:20px;position:relative;overflow:hidden;cursor:pointer;display:block;width:100%;text-align:left;transition:opacity .5s,transform .5s var(--ease)}
+.mi.hide{display:none}
+.mi img{height:auto;aspect-ratio:var(--r,3/4);transition:transform 1.2s var(--ease),filter .6s}
+.mi:hover img{transform:scale(1.07);filter:brightness(.7)}
+.mi span{position:absolute;left:18px;bottom:14px;font-family:var(--serif);font-size:1.4rem;opacity:0;transform:translateY(14px);transition:.5s var(--ease)}
+.mi:hover span,.mi:focus-visible span{opacity:1;transform:none}
+#lb{position:fixed;inset:0;z-index:170;background:rgba(14,4,10,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.5s}
+#lb.open{opacity:1;visibility:visible}
+#lb img{width:auto;height:auto;max-width:88vw;max-height:84vh;object-fit:contain;transform:scale(.92);transition:transform .7s var(--ease)}
+#lb.open img{transform:none}
+#lb button{position:absolute;font-size:2.4rem;font-family:var(--serif);width:56px;height:56px}
+#lbx{top:16px;right:16px}#lbp{left:12px;top:50%}#lbn{right:12px;top:50%}
+#lbc{position:absolute;bottom:22px;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--blush)}
+/* collections */
+.hs{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:24px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.col{flex:0 0 min(86vw,560px);scroll-snap-align:start}
+.col .imgs{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;height:440px}
+.col .imgs>div{overflow:hidden}.col .imgs>div:first-child{grid-row:span 2}
+.col .imgs img{transition:transform 1.2s var(--ease)}.col:hover .imgs img{transform:scale(1.06)}
+.col .meta{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 6px;color:var(--gold);font-size:.9rem}
+/* about */
+.phil{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.phil div{padding:28px 0;border-top:1px solid var(--gold)}
+.phil h3{margin-bottom:8px}
+.ph{aspect-ratio:3/4;display:grid;place-items:center;background:linear-gradient(160deg,#4a2038,#1c0c16);border:1px dashed var(--gold);color:var(--gold);font-family:var(--serif);font-size:1.5rem;text-align:center;padding:20px}
+/* contact */
+.cg{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,90px)}
+.fld{position:relative;margin-bottom:26px}
+.fld input,.fld select,.fld textarea{width:100%;background:none;border:0;border-bottom:1px solid var(--line);color:var(--text);font:inherit;padding:22px 0 8px;outline:none;border-radius:0}
+.fld select option{background:var(--bg2)}
+.fld label{position:absolute;left:0;top:22px;color:var(--muted);transition:.35s var(--ease);pointer-events:none}
+.fld input:focus~label,.fld input:not(:placeholder-shown)~label,.fld textarea:focus~label,.fld textarea:not(:placeholder-shown)~label,.fld select~label{top:0;font-size:.75rem;color:var(--gold)}
+.fld:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .6s var(--ease)}
+.fld:focus-within:after{width:100%}
+.ci{display:flex;flex-direction:column;gap:22px;margin-top:34px}
+.ci a,.ci div{overflow-wrap:anywhere}.ci a{display:block;transition:color .3s}.ci a:hover{color:var(--gold)}.ci small{display:block;color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.05rem}
+/* footer + floats */
+footer{border-top:1px solid var(--line);padding:70px 0 30px;background:rgba(20,6,14,.6)}
+.fg{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px}
+.fg nav{display:flex;flex-direction:column;gap:6px}
+.copy{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+#wa{position:fixed;right:22px;bottom:22px;z-index:120;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -6px rgba(37,211,102,.55),0 4px 0 #1aa34f;animation:flt 4s ease-in-out infinite;transition:transform .4s var(--ease)}
+#wa:hover{transform:scale(1.12) rotate(-8deg)}
+#wa svg{width:34px;height:34px;fill:#fff}
+#wa em{position:absolute;right:76px;white-space:nowrap;font-style:normal;background:var(--text);color:var(--bg);font-size:.85rem;padding:8px 14px;border-radius:4px;opacity:0;transform:translateX(10px);transition:.4s;pointer-events:none}
+#wa:hover em,#wa:focus-visible em{opacity:1;transform:none}
+#top{position:fixed;right:34px;bottom:100px;z-index:120;width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;background:var(--bg);opacity:0;pointer-events:none;transition:.4s;color:var(--gold)}
+#top.show{opacity:1;pointer-events:auto}
+#toast{width:max-content;text-align:center;position:fixed;left:50%;top:26px;z-index:190;background:var(--blush);color:var(--bg);padding:18px 30px;max-width:90vw;transform:translate(-50%,-160%);transition:transform .8s var(--ease);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+#toast.show{transform:translate(-50%,0)}
+@media(max-width:860px){.hero .wrap,.split,.svp,.cg{grid-template-columns:1fr}.svp:nth-child(even) .frame{order:0}.stage{height:56vh}.hero{padding-top:110px}.col .imgs{height:340px}.step{border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:960px){.logo{letter-spacing:.14em}}
+@media(max-width:600px){#wa em{display:none}#top{right:28px}.logo{font-size:1.02rem;letter-spacing:.1em}.cta{flex-direction:column;align-items:stretch}.cta .btn{width:100%}.svc{padding:26px 22px}.head{margin-bottom:34px}.col .imgs{height:300px}.marq div{font-size:1.6rem}.filters button{padding:8px 16px}.card{aspect-ratio:3/4}.stage{height:50vh}.ring{width:100px;height:100px}}
+@media(max-width:380px){.logo{font-size:.9rem;letter-spacing:.06em}}
+@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition-duration:.01s!important}html{scroll-behavior:auto}.rv,.mask>span{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<!-- ================= LOADER ================= -->
+<div id="loader" role="status" aria-live="polite"><h1>STYLE BY GRACIOUS</h1><i id="lbar"></i><div id="pct">0%</div></div>
+<div id="prog"></div><div id="cur"></div><div id="dot"></div>
+<canvas id="bgc" aria-hidden="true"></canvas><div class="blob b1"></div><div class="blob b2"></div>
+
+<!-- ================= HEADER ================= -->
+<header id="hd"><div class="wrap nav">
+  <a href="#/" class="logo" aria-label="STYLE BY GRACIOUS home">STYLE BY GRACIOUS</a>
+  <nav class="links" id="links" aria-label="Main"><span id="ind"></span></nav>
+  <a href="#/contact" class="btn mag">Book a Consultation</a>
+  <button id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mob"><span></span><span></span></button>
+</div></header>
+<nav id="mob" aria-label="Mobile"></nav>
+
+<main id="main"></main>
+
+<!-- ================= FOOTER ================= -->
+<footer><div class="wrap">
+  <div class="fg">
+    <div><div class="logo">STYLE BY GRACIOUS</div><p style="margin-top:12px">Where Elegance Meets Expression.</p>
+      <div class="cta"><a class="btn wa" data-wa="" href="#">Chat on WhatsApp</a></div></div>
+    <nav id="fnav" aria-label="Footer"></nav>
+    <div><p>Instagram: @stylebygracious<br>Email: hello@stylebygracious.com<br>Location: Your City, Nigeria</p></div>
+  </div>
+  <div class="copy">&copy; <span id="yr"></span> STYLE BY GRACIOUS. All rights reserved.</div>
+</div></footer>
+
+<a id="wa" data-wa="" href="#" aria-label="Chat with us on WhatsApp"><em>Chat with us on WhatsApp</em>
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 28l7.1-1.86a12 12 0 0 0 4.94 1.05h.01C22.68 27.2 28 21.8 28 15.17A12 12 0 0 0 16.04 3zm0 21.9h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-4.21 1.1 1.12-4.1-.24-.38a9.87 9.87 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.13 1.03 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.46-4.45 9.9-9.55 9.9zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg></a>
+<button id="top" aria-label="Back to top">&uarr;</button>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button id="lbx" aria-label="Close">&times;</button><button id="lbp" aria-label="Previous">&lsaquo;</button><img id="lbi" alt=""><button id="lbn" aria-label="Next">&rsaquo;</button><div id="lbc"></div></div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+'use strict';
+/* ---------- CONFIG: edit these ---------- */
+const WA_NUMBER='234XXXXXXXXXX'; // digits only, no +, spaces or brackets
+/* Pixabay images (royalty-free, Pixabay Content License). Swap in any cdn.pixabay.com URL here. */
+const PX=[
+ 'https://cdn.pixabay.com/photo/2023/04/07/05/59/woman-7905583_1280.jpg',
+ 'https://cdn.pixabay.com/photo/2025/03/31/05/00/woman-9503948_1280.jpg',
+ 'https://cdn.pixabay.com/photo/2021/04/16/07/22/ao-dai-6182834_1280.jpg',
+ 'https://cdn.pixabay.com/photo/2021/07/26/01/47/woman-6493189_1280.jpg'];
+const IM={a:0,b:3,c:1,d:2,e:3,f:2,g:0,h:1,i:2,j:0};
+const POS={a:'50% 20%',b:'50% 30%',c:'50% 25%',d:'40% 30%',e:'70% 40%',f:'25% 30%',g:'50% 55%',h:'50% 60%',i:'65% 30%',j:'50% 40%'};
+const img=(k,alt,w,lazy=1)=>`<img src="${PX[IM[k]]}" alt="${alt}" ${lazy?'loading="lazy"':''} referrerpolicy="no-referrer" style="object-position:${POS[k]}" onerror="this.removeAttribute('src')">`;
+const PAGES=[['/','Home'],['/about','About'],['/collections','Collections'],['/services','Services'],['/lookbook','Lookbook'],['/contact','Contact']];
+const SERVICES=[
+ ['Custom Fashion Design','Original pieces drawn and cut around your identity.','M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z','a'],
+ ['Bespoke Outfits','Made to your measure, from first sketch to final stitch.','M4 20L20 4M4 4l16 16','c'],
+ ['Bridal Wear','Gowns and ceremony looks for the most photographed day of your life.','M12 21C6 15 3 12 3 8a4.5 4.5 0 0 1 9-1 4.5 4.5 0 0 1 9 1c0 4-3 7-9 13z','b'],
+ ['Occasion Wear','Standout outfits for weddings, galas and celebrations.','M6 3h12l-2 8a4 4 0 0 1-8 0zM12 15v6M8 21h8','e'],
+ ['Fashion Styling','Wardrobe direction and complete looks for events or everyday.','M3 8l9-5 9 5-9 5zM3 13l9 5 9-5','d'],
+ ['Creative Consultation','A one-to-one session to shape your idea into a design brief.','M4 5h16v11H9l-5 4z','f'],
+ ['Alterations & Finishing','Precise refitting and finishing for garments you already own.','M5 19L19 5M7 7a2 2 0 1 0 0 .01M17 17a2 2 0 1 0 0 .01','h']];
+const COLS=[['Ìmọ́lẹ̀ Bridal','Spring/Summer 2025','Layered lace, sculpted bodices and hand-finished trims.',['b','e','g']],['Noir Evening','Autumn/Winter 2025','Structured silhouettes in deep tones for after dark.',['c','d','j']],['Heritage Reimagined','Resort 2024','Traditional fabrics cut with a contemporary line.',['a','f','h']],['Everyday Grace','Spring/Summer 2024','Relaxed tailoring made to move through your day.',['i','g','e']]];
+const LOOKS=[['b','Bridal','Ivory Veil','4/5'],['c','Luxury','Noir Column','3/4'],['a','Traditional','Heritage Wrap','2/3'],['e','Evening','Rose Hour','4/5'],['d','Casual','Linen Study','1/1'],['j','Luxury','Gilded Cape','3/4'],['g','Bridal','Silk Promise','2/3'],['f','Casual','Sunday Cut','4/5'],['h','Evening','Midnight Drape','3/4'],['i','Traditional','Aso-Oke Edit','1/1']];
+const STEPS=[['Consultation','We discuss your vision, occasion and budget.'],['Concept','Sketches and fabric ideas take shape.'],['Measurements','Precise measurements for a true fit.'],['Design','Your pattern is cut and construction begins.'],['Fitting','Refinements until every line is right.'],['Final Creation','Finishing, pressing and delivery.']];
+
+/* ---------- helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const lowPower=(navigator.hardwareConcurrency||8)<=4||innerWidth<700;
+const waLink=m=>`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(m)}`;
+const DEF_MSG='Hello Style By Gracious, I would like to make an enquiry about your fashion design services.';
+const svcMsg=s=>`Hello Style By Gracious, I’m interested in your ${s} service. I would like to make an enquiry.`;
+const WAI='<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 28l7.1-1.86a12 12 0 0 0 4.94 1.05h.01C22.68 27.2 28 21.8 28 15.17A12 12 0 0 0 16.04 3zm0 21.9h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-4.21 1.1 1.12-4.1-.24-.38a9.87 9.87 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.13 1.03 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.46-4.45 9.9-9.55 9.9zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>';
+const waBtn=(t,msg,cls='')=>`<a class="btn wa ${cls}" data-wa="${(msg||'').replace(/"/g,'&quot;')}" href="#" rel="noopener">${WAI}${t}</a>`;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),4200)}
+const mask=(t,d=0)=>`<span class="mask" style="--d:${d}s"><span>${t}</span></span>`;
+const head=(eb,t)=>`<div class="head rv"><span class="eyebrow">${eb}</span><h2>${t}</h2></div>`;
+
+/* ---------- page templates ---------- */
+const P={};
+P['/']=()=>`
+<section class="hero"><div class="wrap">
+ <div><span class="eyebrow rv">Fashion &amp; Bespoke Design</span>
+  <h1><span class="mask in"><span>STYLE</span></span><span class="mask in" style="--d:.15s"><span><em>BY</em> GRACIOUS</span></span></h1>
+  <p class="tag rv" style="--d:.4s">Where Elegance Meets Expression.</p>
+  <p class="rv" style="--d:.5s">A fashion house creating distinctive, made-to-measure pieces for people who dress with intention.</p>
+  <div class="cta rv" style="--d:.65s"><a class="btn fill mag" href="#/collections">Explore Collection</a><a class="btn mag" href="#/about">Discover Our Story</a>${waBtn('Chat on WhatsApp','', 'mag')}</div></div>
+ <div class="stage" id="stage"><div class="ring"></div>
+  <div class="layer l1" data-z="1">${img('a','Model wearing a sculpted designer gown',900,0)}</div>
+  <div class="layer l2 float" data-z="2.4">${img('e','Close detail of tailored fabric',600,0)}</div>
+  <div class="layer l3 float" data-z="3.2" style="animation-delay:-3s">${img('c','Editorial fashion portrait',500,0)}</div></div>
+</div></section>
+<div class="marq" aria-hidden="true"><div>${'<b style="font-weight:400">Bespoke</b><span>&#10038;</span><b style="font-weight:400">Bridal</b><span>&#10038;</span><b style="font-weight:400">Occasion Wear</b><span>&#10038;</span><b style="font-weight:400">Styling</b><span>&#10038;</span>'.repeat(6)}</div></div>
+<section><div class="wrap">${head('Featured collection','Pieces made to be remembered')}
+ <div class="grid3">${COLS.slice(0,3).map((c,i)=>`<article class="tilt rv" style="--d:${i*.12}s"><div class="card">${img(c[3][0],c[0]+' collection',800)}<div class="ov"><h3>${c[0]}</h3><p>${c[2]}</p><a class="lnk" href="#/collections">Explore</a></div></div></article>`).join('')}</div></div></section>
+<section><div class="wrap split">
+ <div class="frame rv"><div class="par" data-s=".06" style="height:120%;margin-top:-10%">${img('f','Designer fitting a bespoke outfit',900)}</div></div>
+ <div class="rv"><span class="eyebrow">Our story</span><h2>Dressed with intention</h2>
+  <p style="margin:24px 0 32px">Style by Gracious is a fashion brand dedicated to creating distinctive pieces that combine elegance, individuality, and contemporary expression.</p><a class="btn mag" href="#/about">Discover More</a></div></div></section>
+<section><div class="wrap">${head('Services','Designed around you')}
+ <div class="grid3">${SERVICES.slice(0,3).map((s,i)=>svcCard(s,i)).join('')}</div>
+ <div class="cta rv"><a class="btn fill mag" href="#/services">View All Services</a></div></div></section>`;
+function svcCard(s,i){return `<article class="svc tilt rv" style="--d:${(i%3)*.1}s"><svg class="ic" viewBox="0 0 24 24"><path d="${s[2]}"/></svg><h3>${s[0]}</h3><p>${s[1]}</p>${waBtn('Make an Enquiry',svcMsg(s[0]))}</article>`}
+
+P['/about']=()=>`
+<section style="padding-top:170px"><div class="wrap">${head('About','Our story')}
+ <div class="split"><div class="rv"><p style="font-size:1.15rem">Style by Gracious began with a simple belief: clothing should feel like an extension of who you are. Every garment is designed, cut and finished with patience, so it fits the body and the moment.</p><p style="margin-top:18px">[Editable: add the brand’s founding year, inspiration and milestones here.]</p></div>
+ <div class="frame sq rv">${img('g','Fabric and sketches in the atelier',900)}</div></div></div></section>
+<section><div class="wrap">${head('Philosophy','What guides every stitch')}
+ <div class="phil">${[['Creativity','Ideas that are new, never copied.'],['Quality','Fabrics and finishing that last.'],['Individuality','One client, one design.'],['Elegance','Restraint, proportion and grace.'],['Craftsmanship','Handwork you can feel.']].map((x,i)=>`<div class="rv" style="--d:${i*.08}s"><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join('')}</div></div></section>
+<section><div class="wrap split"><div class="ph rv">Designer portrait<br>(replace with photo)</div>
+ <div class="rv"><span class="eyebrow">The designer</span><h2>Gracious [Surname]</h2><p style="margin:22px 0">[Editable placeholder: add the designer’s biography, training, and notable work here.]</p><div class="cta">${waBtn('Book via WhatsApp','')}<a class="btn" href="#/contact">Book a Consultation</a></div></div></div></section>`;
+
+P['/collections']=()=>`
+<section style="padding-top:170px"><div class="wrap">${head('Collections','Season by season')}
+ <div class="hs" tabindex="0" aria-label="Collections, scroll horizontally">${COLS.map(c=>`<article class="col"><div class="imgs"><div>${img(c[3][0],c[0]+' look one',800)}</div><div>${img(c[3][1],c[0]+' look two',500)}</div><div>${img(c[3][2],c[0]+' look three',500)}</div></div><div class="meta"><span>${c[1]}</span></div><h3>${c[0]}</h3><p style="margin:8px 0 14px">${c[2]}</p><a class="lnk" href="#/lookbook">Explore</a></article>`).join('')}</div></div></section>`;
+
+P['/services']=()=>`
+<section style="padding-top:170px"><div class="wrap">${head('Services','What we make for you')}
+ ${SERVICES.map((s,i)=>`<article class="svp"><div class="frame rv">${img(s[3],s[0],900)}</div><div class="rv"><h3 class="big3">${s[0]}</h3><p style="margin:14px 0 8px">${s[1]}</p><p style="margin-bottom:26px">Process: consultation, concept, measurements, design, fitting, final creation.</p><div class="cta" style="margin:0">${waBtn('Book via WhatsApp',svcMsg(s[0]))}<a class="btn" href="#/contact">Book a Consultation</a></div></div></article>`).join('')}
+ <div class="head rv" style="margin-top:80px"><span class="eyebrow">Our process</span><h2>From idea to fitting</h2></div>
+ <div class="steps">${STEPS.map((s,i)=>`<div class="step rv" style="--d:${i*.1}s"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('')}</div></div></section>`;
+
+P['/lookbook']=()=>`
+<section style="padding-top:170px"><div class="wrap">${head('Lookbook','The editorial')}
+ <div class="filters" role="group" aria-label="Filter looks">${['All','Bridal','Traditional','Casual','Luxury','Evening'].map((c,i)=>`<button data-f="${c}" class="${i?'':'on'}">${c}</button>`).join('')}</div>
+ <div class="mas">${LOOKS.map((l,i)=>`<button class="mi" data-c="${l[1]}" data-i="${i}" style="--r:${l[3]}" aria-label="View ${l[2]}">${img(l[0],l[2]+', '+l[1]+' look',800)}<span>${l[2]}</span></button>`).join('')}</div></div></section>`;
+
+P['/contact']=()=>`
+<section style="padding-top:170px"><div class="wrap">${head('Contact','Let’s design something')}
+ <div class="cg"><div class="rv"><p>Tell us about the piece you have in mind. We reply within one working day.</p>
+  <div class="ci"><a href="#" data-wa=""><small>WhatsApp</small>+234 XXX XXX XXXX</a><a href="https://instagram.com/" target="_blank" rel="noopener"><small>Instagram</small>@stylebygracious</a><a href="mailto:hello@stylebygracious.com"><small>Email</small>hello@stylebygracious.com</a><div><small style="color:var(--gold);font-family:var(--serif);font-style:italic">Location</small>Your City, Nigeria</div></div>
+  <div class="cta">${waBtn('Chat on WhatsApp','')}</div></div>
+ <form id="cf" class="rv" novalidate>
+  <div class="fld"><input id="n" name="name" placeholder=" " required autocomplete="name"><label for="n">Name</label></div>
+  <div class="fld"><input id="e" type="email" name="email" placeholder=" " required autocomplete="email"><label for="e">Email</label></div>
+  <div class="fld"><input id="p" type="tel" name="phone" placeholder=" " autocomplete="tel"><label for="p">Phone</label></div>
+  <div class="fld"><select id="s" name="service" required><option value="" hidden></option>${SERVICES.map(s=>`<option>${s[0]}</option>`).join('')}</select><label for="s">Service</label></div>
+  <div class="fld"><textarea id="m" name="message" rows="4" placeholder=" " required></textarea><label for="m">Message</label></div>
+  <button class="btn fill mag" type="submit">Send Enquiry</button></form></div></div></section>`;
+
+/* ---------- router ---------- */
+const main=$('#main');let cur='';
+function route(){
+  let p=location.hash.slice(1)||'/';if(!P[p])p='/';
+  if(p===cur)return;cur=p;
+  main.innerHTML=`<div class="page act" id="pg">${P[p]()}</div>`;
+  document.title=(p==='/'?'':PAGES.find(x=>x[0]===p)[1]+' | ')+'STYLE BY GRACIOUS | Fashion & Bespoke Design';
+  scrollTo({top:0,behavior:'instant'});
+  $$('.links a,#mob a,#fnav a').forEach(a=>{const on=a.getAttribute('href')==='#'+p;a.classList.toggle('on',on);on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+  moveInd();closeMenu();initPage(p);
+}
+function moveInd(){const a=$('.links a.on'),i=$('#ind');if(!a){i.style.width='0';return}i.style.left=a.offsetLeft+14+'px';i.style.width=a.offsetWidth-28+'px'}
+addEventListener('hashchange',route);addEventListener('resize',moveInd);
+
+/* nav build */
+$('#links').insertAdjacentHTML('afterbegin',PAGES.map(p=>`<a href="#${p[0]}">${p[1]}</a>`).join(''));
+$('#mob').innerHTML=PAGES.map(p=>`<a href="#${p[0]}">${p[1]}</a>`).join('')+waBtn('Chat on WhatsApp','');
+$('#fnav').innerHTML=PAGES.map(p=>`<a href="#${p[0]}" class="lnk" style="color:inherit">${p[1]}</a>`).join('');
+$('#yr').textContent=new Date().getFullYear();
+const burger=$('#burger'),mob=$('#mob');
+function closeMenu(){mob.classList.remove('open');burger.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+burger.onclick=()=>{const o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();closeLb()}});
+
+/* WhatsApp: delegated, real wa.me links */
+document.addEventListener('click',e=>{const a=e.target.closest('[data-wa]');if(!a)return;e.preventDefault();
+  window.open(waLink(a.dataset.wa||DEF_MSG),'_blank','noopener')});
+
+/* ---------- per-page init ---------- */
+let io;
+function initPage(p){
+  io&&io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  $$('.rv,.mask').forEach(el=>io.observe(el));
+  $$('.btn.mag').forEach(magnet);
+  if(fine&&!RM){$$('.tilt').forEach(tilt)}
+  if(p==='/'&&fine&&!RM)heroParallax();
+  if(p==='/lookbook')lookbook();
+  if(p==='/contact')form();
+  $$('a,button,.mi,.card').forEach(el=>{el.onmouseenter=()=>$('#cur').classList.add('big');el.onmouseleave=()=>$('#cur').classList.remove('big')});
+}
+function tilt(el){const c=el.firstElementChild||el;
+  el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`rotateY(${x*10}deg) rotateX(${-y*10}deg) translateZ(0)`;el.style.boxShadow=`${-x*30}px ${20-y*20}px 50px rgba(0,0,0,.45)`});
+  el.addEventListener('mouseleave',()=>{el.style.transform='';el.style.boxShadow=''})}
+function magnet(b){if(!fine||RM)return;b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.22}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')}
+function heroParallax(){const st=$('#stage');if(!st)return;const L=$$('.layer',st);
+  addEventListener('mousemove',function h(e){if(!$('#stage')){removeEventListener('mousemove',h);return}const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+    L.forEach(l=>{const z=+l.dataset.z;l.style.transform=`translate3d(${x*-14*z}px,${y*-14*z}px,0) rotateY(${x*6}deg) rotateX(${-y*6}deg)`})})}
+
+/* lookbook filter + viewer */
+let vis=[];
+function lookbook(){
+  $$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.toggle('on',x===b));
+    $$('.mi').forEach(m=>{const s=b.dataset.f==='All'||m.dataset.c===b.dataset.f;m.classList.toggle('hide',!s);if(s){m.style.opacity=0;requestAnimationFrame(()=>requestAnimationFrame(()=>m.style.opacity=1))}})});
+  $$('.mi').forEach(m=>m.onclick=()=>{vis=$$('.mi:not(.hide)');openLb(vis.indexOf(m))});
+}
+let li=0;
+function openLb(i){li=(i+vis.length)%vis.length;const m=vis[li],im=$('img',m);$('#lbi').src=im.src;$('#lbi').alt=im.alt;$('#lbc').textContent=$('span',m).textContent;$('#lb').classList.add('open');$('#lbx').focus()}
+function closeLb(){$('#lb').classList.remove('open')}
+$('#lbx').onclick=closeLb;$('#lbp').onclick=()=>openLb(li-1);$('#lbn').onclick=()=>openLb(li+1);
+$('#lb').onclick=e=>{if(e.target.id==='lb')closeLb()};
+addEventListener('keydown',e=>{if(!$('#lb').classList.contains('open'))return;if(e.key==='ArrowLeft')openLb(li-1);if(e.key==='ArrowRight')openLb(li+1)});
+
+/* contact form */
+function form(){const f=$('#cf');f.onsubmit=e=>{e.preventDefault();
+  const bad=$$('[required]',f).find(i=>!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value)));
+  if(bad){bad.focus();toast('Please complete the '+bad.name+' field.');return}
+  toast('Thank you, '+$('#n').value.trim().split(' ')[0]+'. Your enquiry is received and we will reply within one working day.');f.reset()}}
+
+/* scroll: header, progress, top, parallax */
+const hd=$('#hd'),prog=$('#prog'),top_=$('#top');let tick=false;
+function onScroll(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  hd.classList.toggle('solid',y>60);prog.style.width=(h>0?y/h*100:0)+'%';top_.classList.toggle('show',y>700);
+  if(!RM&&!lowPower)$$('.par').forEach(p=>{const r=p.parentElement.getBoundingClientRect();p.style.transform=`translate3d(0,${(r.top+r.height/2-innerHeight/2)*-(+p.dataset.s||.05)}px,0)`});
+  tick=false}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+top_.onclick=()=>scrollTo({top:0,behavior:RM?'auto':'smooth'});
+
+/* cursor */
+if(fine&&!RM){document.body.classList.add('cc');const c=$('#cur'),d=$('#dot');let mx=0,my=0,cx=0,cy=0;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.transform=`translate(${mx}px,${my}px)`});
+  (function loop(){cx+=(mx-cx)*.14;cy+=(my-cy)*.14;c.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})()}
+
+/* particles */
+if(!RM&&!lowPower){const cv=$('#bgc'),x=cv.getContext('2d');let W,H;const N=38,ps=[];
+  const rs=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};rs();addEventListener('resize',rs);
+  for(let i=0;i<N;i++)ps.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,v:Math.random()*.25+.05,a:Math.random()*.5+.15});
+  (function f(){if(!document.hidden){x.clearRect(0,0,W,H);ps.forEach(p=>{p.y-=p.v;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=`rgba(232,196,189,${p.a})`;x.fill()})}requestAnimationFrame(f)})()}
+
+/* loader → start */
+(function boot(){let n=0;const L=$('#loader'),pc=$('#pct'),bar=$('#lbar');bar.style.width='0';
+  const step=()=>{n+=Math.random()*9+3;if(n>100)n=100;pc.textContent=Math.floor(n)+'%';bar.style.width=Math.min(220,n*2.2)+'px';
+    if(n<100)setTimeout(step,RM?5:70);else setTimeout(()=>{L.classList.add('done');route();onScroll()},350)};step()})();
+</script>
+</body>
+</html>
